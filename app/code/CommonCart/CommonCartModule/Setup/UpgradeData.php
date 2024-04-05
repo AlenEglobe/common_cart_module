@@ -40,7 +40,28 @@ class UpgradeData implements UpgradeDataInterface
 
             $eavSetup->addAttribute(
                 Customer::ENTITY,
-
+                'commonCart_attribute',
+                [
+                    'type' => 'int',
+                    'backend' => '',
+                    'frontend' => '',
+                    'label' => 'Common Cart',
+                    'input' => 'boolean',
+                    'class' => '',
+                    'source' => '',
+                    'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+                    'visible' => true,
+                    'required' => false,
+                    'user_defined' => true,
+                    'default' => 0,
+                    'searchable' => false,
+                    'filterable' => false,
+                    'comparable' => false,
+                    'visible_on_front' => false,
+                    'used_in_product_listing' => true,
+                    'unique' => false,
+                    'apply_to' => 'simple',
+                ]
             );
 
             $attribute = $this->eavSetup->getEavConfig()->getAttribute(
