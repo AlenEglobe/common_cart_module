@@ -1,0 +1,1 @@
+magento/module-b2b

@@ -1,0 +1,63 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+<system>
+<tab id="msi_low_stock_notification" translate="label" sortOrder="200">
+<label>Msi low stock</label>
+</tab>
+<section id="msi_low_stock_notification" translate="label" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+<class>separator-top</class>
+<label>Low Stock Notification</label>
+<tab>msi_low_stock_notification</tab>
+<resource>Egits_MsiLowStockNotification::configuration</resource>
+<group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+<label>General Configuration</label>
+<comment>This module is provided for free, and there is a restriction applicable to a maximum of 500 customers.</comment>
+<field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+<label>Enable Module</label>
+<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+</field>
+</group>
+<group id="low_stock_configuration" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+<label>Low Stock Configuration</label>
+<!--  1st Field: Low Stock Threshold  -->
+<field id="low_stock_threshold" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+<label>Low Stock Threshold</label>
+<validate>validate-number</validate>
+</field>
+<!--  2nd Field: Cron Job Frequency  -->
+<field id="cron_job_frequency" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+<label>Low Stock Cron Frequency</label>
+<source_model>Magento\Cron\Model\Config\Source\Frequency</source_model>
+<backend_model>Egits\MsiLowStockNotification\Model\Config\CronConfig</backend_model>
+</field>
+<!--  <field id="from_date" translate="label" type="date" sortOrder="15" showInDefault="1" showInWebsite="1"
+                      showInStore="1">
+                   <label>From</label>
+                  
+                   <frontend_model>Egits\MsiLowStockNotification\Block\DatePicker</frontend_model>
+               </field>  -->
+<field id="time" translate="label comment" sortOrder="2" type="time" showInDefault="1" showInWebsite="1" showInStore="1">
+<label>Start Time</label>
+</field>
+</group>
+<group id="email_configuration" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+<label>Email Configuration</label>
+<field id="cc_mail" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+<label>Email CC</label>
+<!--  <validate>required-entry <em>validate-sixteen-digit</em></validate>  -->
+</field>
+<field id="cron_job_frequency_email" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+<label>Email Cron Frequency</label>
+<source_model>Magento\Cron\Model\Config\Source\Frequency</source_model>
+<backend_model>Egits\MsiLowStockNotification\Model\Config\CronConfigEmail</backend_model>
+</field>
+<field id="notification_datetime" translate="label" type="datetime" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1"><label>From</label>
+<!--  Here we pass class where we create date picker -->
+<frontend_model>Egits\MsiLowStockNotification\Block\DatePicker</frontend_model>
+</field>
+<!--  <field id="time" translate="label comment" sortOrder="2" type="time" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Start Time</label>
+                </field>  -->
+</group>
+</section>
+</system>
+</config>

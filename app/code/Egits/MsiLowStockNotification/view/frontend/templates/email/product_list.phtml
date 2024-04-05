@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Low Stock Notification</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .alert {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert">
+        Your wishlist products are running low in stock. Please find the details below:
+    </div>
+    <?php $items = $block->getItems(); ?>
+    <?php if (!empty($items)): ?>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Source Name</th>
+                    <th>Source Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($items as $item): ?>
+            <tr>
+                <td><?= /* @noEscape */ $item['sku'] ?></td>
+                <td><?= /* @noEscape */ $item['source_name'] ?></td>
+                <td><?= /* @noEscape */ $item['source_qty'] ?></td>
+            </tr>
+        <?php endforeach; ?>
+
+            </tbody>
+        </table>
+    <?php endif; ?>
+</body>
+</html>

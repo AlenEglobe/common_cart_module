@@ -1,0 +1,2 @@
+app/code/Magento/Company/view/frontend/web/js/jstree.js
+app/code/Magento/SharedCatalog/view/adminhtml/web/js/jstree/jstree.js

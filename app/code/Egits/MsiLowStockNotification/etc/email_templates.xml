@@ -1,0 +1,3 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+<template id="custom_email_template" label="add to cart" module="Egits_MsiLowStockNotification" file="custom_email_template.html" type="html" area="frontend"/>
+</config>

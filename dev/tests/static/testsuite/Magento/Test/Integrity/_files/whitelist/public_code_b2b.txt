@@ -1,0 +1,6 @@
+Magento\NegotiableQuote\Block\Adminhtml\Quote\Comments
+Magento\NegotiableQuote\Block\Adminhtml\Quote\History
+Magento\NegotiableQuote\Block\Quote\Comments
+Magento\NegotiableQuote\Block\Quote\History
+Magento\Company\Block\Company\Management
+Magento\Company\Block\Company\Role\Edit

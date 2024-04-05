@@ -1,0 +1,13 @@
+app/code/Magento/Company/Model/ResourceModel/Company/Grid
+app/code/Magento/Company/Ui/Component/Listing/Column
+app/code/Magento/CompanyCredit/Model
+app/code/Magento/NegotiableQuote/Controller/Quote
+app/code/Magento/NegotiableQuote/Model
+app/code/Magento/RequisitionList/Controller/Item
+app/code/Magento/PurchaseOrderRule/Model/ResourceModel/PurchaseOrder/Grid
+app/code/Magento/PurchaseOrder/Model/Notification/Email/ContentSource
+app/code/Magento/Company/Test/Fixture/CustomerGroup
+app/code/Magento/SharedCatalog/Test/Fixture/AssignProductsCategory
+app/code/Magento/NegotiableQuote/Test/Fixture/QuoteIdMask
+app/code/Magento/NegotiableQuote/view/adminhtml/templates/quote/history.phtml
+app/code/Magento/NegotiableQuote/view/frontend/templates/quote/history.phtml

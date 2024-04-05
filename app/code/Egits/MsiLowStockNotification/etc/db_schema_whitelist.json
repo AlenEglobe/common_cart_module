@@ -1,0 +1,18 @@
+{
+    "low_stock_sources": {
+        "column": {
+            "id": true,
+            "customer_id": true,
+            "sku": true,
+            "source_id": true,
+            "created_at": true,
+            "updated_at": true,
+            "source_name": true,
+            "source_qty": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "LOW_STOCK_SOURCES_CUSTOMER_ID_SKU": true
+        }
+    }
+}

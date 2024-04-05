@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config>
+    <profile>
+        <di>di.xml</di>
+        <websites>1</websites>
+        <store_groups>1</store_groups>
+        <store_views>1</store_views>
+        <simple_products>100</simple_products>
+        <categories>10</categories>
+        <!-- -->
+        <customers>10</customers> <!-- Number of customers to generate -->
+        <companies>2</companies> <!-- Number of customers to generate -->
+        <user_roles_per_company>2</user_roles_per_company>
+        <teams_per_company>3</teams_per_company>
+        <orders>25</orders> <!-- Orders count -->
+        <negotiable_quotes>20</negotiable_quotes>
+        <shared_catalogs>17</shared_catalogs> <!-- Number of shared catalogs to generate -->
+    </profile>
+</config>

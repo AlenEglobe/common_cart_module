@@ -1,0 +1,13 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+<group id="default">
+<!--  Define your desired schedule for the SendCustomDataEmail task  -->
+<job name="testing_cron" instance="Egits\MsiLowStockNotification\Cron\SendCustomDataEmail" method="execute">
+<!--  <schedule>*/5 * * * *</schedule> Define your desired schedule for sending custom emails  -->
+<config_path>crontab/default/jobs/testing_cron/schedule/cron_expr_email</config_path>
+</job>
+<job name="egits_msi_low_stock_notification_check_stocks2" instance="Egits\MsiLowStockNotification\Cron\CheckStock" method="execute">
+<!--  <schedule>* * * * *</schedule> Adjust the schedule as needed  -->
+<config_path>crontab/default/jobs/egits_msi_low_stock_notification_check_stocks/schedule/cron_expr</config_path>
+</job>
+</group>
+</config>
